@@ -316,7 +316,7 @@ function laadSingleMedewerker(id) {
                         </div>
                     </div>
                     <div id="alle-urendeclaraties-medewerker">
-                        <div class="medewerkers-inner">
+                    <div class="medewerkers-inner">
                     <div class="medewerker-item-outer-flex">
                         <a href="#" class="medewerkers-item-flex">
                             <div class="medewerkers-content-wrapper">
@@ -1082,9 +1082,8 @@ function maandNummerFunctie(maandnaam) {
 function addUrendeclaratieToAllMedewerkers(){
     var input1 = document.getElementById('maandkeuze').value;
     var input2 = maandNummerFunctie(input1);
-
     var url = "https://api.qienurenapp.privatedns.org:9100/api/urendeclaraties/maakenkoppelaanallen/" + input1 + "/" + input2;
-    
+
     var xhr = new XMLHttpRequest();                     // AJAX
     xhr.onreadystatechange = function() {               // readystate (0 t/m 4), methode gebeurt 4x
         laadUrendeclaraties();
